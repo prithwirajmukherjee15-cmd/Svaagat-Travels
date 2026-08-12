@@ -237,7 +237,7 @@ workflow, commit conventions and coding guidelines.
 
 ## 🙋 About the Author
 
-**Prithwiraj Mukherjee** — a full-stack developer who enjoys turning ideas into polished,
+**Prithwiraj Mukherjee** — a marketeer who enjoys turning ideas into polished,
 production-minded web applications. Svaagat Travels was built as a client-first demo to
 showcase an end-to-end product: clean React front end, a typed FastAPI back end, secure
 auth and payments, and a considered, premium UI.
