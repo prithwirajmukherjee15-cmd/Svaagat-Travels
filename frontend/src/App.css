@@ -1,0 +1,7 @@
+/* App-level styles kept minimal. Brand tokens live in index.css */
+.tc-gradient-hero {
+    background: linear-gradient(90deg, rgba(6,43,91,0.94) 0%, rgba(6,43,91,0.62) 45%, rgba(6,43,91,0.18) 100%);
+}
+.tc-promo-strip {
+    background: linear-gradient(90deg, rgba(254,194,15,0.22) 0%, rgba(255,210,77,0.10) 55%, rgba(255,255,255,0) 100%);
+}

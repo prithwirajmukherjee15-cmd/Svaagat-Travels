@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+    :root {
+        /* Thomas Cook brand raw tokens */
+        --tc-blue-900: #062B5B;
+        --tc-blue-800: #033E7E;
+        --tc-blue-700: #0354A6;
+        --tc-blue-600: #0B66C3;
+        --tc-blue-100: #E8F1FF;
+        --tc-yellow-500: #FEC20F;
+        --tc-yellow-400: #FFD24D;
+        --tc-yellow-100: #FFF6D6;
+        --tc-ink-900: #0B1220;
+        --tc-ink-700: #2A3446;
+        --tc-ink-500: #5B667A;
+        --tc-surface: #FFFFFF;
+        --tc-surface-2: #F6F8FC;
+        --tc-border: #E3E8F2;
+        --tc-focus-ring: #0B66C3;
+
+        /* shadcn semantic tokens mapped to TC palette (HSL) */
+        --background: 0 0% 100%;
+        --foreground: 222 49% 8%;
+        --card: 0 0% 100%;
+        --card-foreground: 222 49% 8%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222 49% 8%;
+        --primary: 210 96% 33%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 220 40% 97%;
+        --secondary-foreground: 210 96% 25%;
+        --muted: 220 40% 97%;
+        --muted-foreground: 218 16% 42%;
+        --accent: 214 100% 95%;
+        --accent-foreground: 210 96% 25%;
+        --destructive: 347 77% 50%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 220 30% 92%;
+        --input: 220 30% 92%;
+        --ring: 210 96% 40%;
+        --radius: 0.9rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+    h1, h2, h3, .font-display {
+        font-family: "Playfair Display", ui-serif, Georgia, serif;
+    }
+}
+
+/* Subtle noise overlay for hero / promo only */
+.tc-noise {
+    position: relative;
+}
+.tc-noise::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.18'/%3E%3C/svg%3E");
+    opacity: 0.05;
+    mix-blend-mode: multiply;
+}
+
+/* Hide scrollbar for horizontal scroll rows */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+}

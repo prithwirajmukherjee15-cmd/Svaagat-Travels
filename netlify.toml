@@ -1,0 +1,17 @@
+# Netlify build configuration for Svaagat Travels (frontend)
+# With `base = "frontend"`, the `command` and `publish` paths are relative to that folder.
+
+[build]
+  base = "frontend"
+  command = "yarn build"
+  publish = "build"
+
+[build.environment]
+  # Pin Node to a version compatible with react-scripts 5 (avoids newer-Node build errors)
+  NODE_VERSION = "20"
+
+# SPA fallback so routes like /hotels, /forex, /holidays/:id work on refresh
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
